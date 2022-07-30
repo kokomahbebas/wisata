@@ -9,7 +9,7 @@
                 <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/">Home</a></li>
                 <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/tentang">Tentang</a></li>
                 <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/produk">Kontak</a></li>
-                <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/store">Login</a></li>
+                <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/user/login">Login</a></li>
             </ul>
         </div>
     </div>

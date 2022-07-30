@@ -11484,3 +11484,12 @@ p {
 .address strong {
   font-size: 1.2rem;
 }
+body .regispunya{
+  background-color: #b88645;
+}
+form.regis{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-color:#b88645;
+
+}

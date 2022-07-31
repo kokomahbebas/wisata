@@ -7,6 +7,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Wiasata Fatubraon</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -50,7 +53,7 @@
                         <h6>Silahkan Login</h5>
                     </div>
 
-                    <form class="px-5">
+                    <form class="px-5" style="display: block" id="loginForm">
                         <div class="mb-3">
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
                                 name="email" placeholder="Email">
@@ -76,16 +79,63 @@
                                     d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z" />
                             </svg> Facebook</a>
 
-                        <button type="submit" class="btn btn-dark px-4 text-white mt-5 w-100"><svg
+                        <a href="#" id="akunBaru" class="btn btn-dark px-4 text-white mt-5 w-100"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
                                 <path style="fill: white"
                                     d="M19.5 15c-2.483 0-4.5 2.015-4.5 4.5s2.017 4.5 4.5 4.5 4.5-2.015 4.5-4.5-2.017-4.5-4.5-4.5zm2.5 5h-2v2h-1v-2h-2v-1h2v-2h1v2h2v1zm-7.18 4h-14.815l-.005-1.241c0-2.52.199-3.975 3.178-4.663 3.365-.777 6.688-1.473 5.09-4.418-4.733-8.729-1.35-13.678 3.732-13.678 6.751 0 7.506 7.595 3.64 13.679-1.292 2.031-2.64 3.63-2.64 5.821 0 1.747.696 3.331 1.82 4.5z" />
-                            </svg> Buat akun baru</button>
+                            </svg> Buat akun baru</a>
+                    </form>
+
+                    {{-- FORM DAFTAR --}}
+                    <form class="px-5" style="display: none" id="daftarForm">
+                        <div class="mb-4 mt-4">
+                            <a href="#" id="kembaliLogin" style="text-decoration: none" class="text-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24">
+                                    <path style="fill:rgb(71, 71, 71)"
+                                        d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+                                </svg> Kembali ke login
+                            </a>
+                        </div>
+                        <div class="mb-3">
+                            <input type="nama" class="form-control" id="email" aria-describedby="emailHelp"
+                                name="email" placeholder="Nama">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="password"
+                                aria-describedby="passwordHelp" name="password" placeholder="Password">
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" id="no_hp"
+                                aria-describedby="passwordHelp" name="no_hp" placeholder="No HP">
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                name="nama" placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary px-4 w-100">Daftar Sekarang</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    $('document').ready(function() {
+        $('#akunBaru').on('click', function() {
+            $('#loginForm').css("display", "none");
+            $('#daftarForm').css("display", "block");
+        });
+        $('#kembaliLogin').on('click', function() {
+            $('#loginForm').css("display", "block");
+            $('#daftarForm').css("display", "none");
+        });
+    });
+</script>
 
 </html>

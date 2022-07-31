@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::prefix('user')->group(function () {
-    Route::get('/login', [AuthController::class, 'login']);
-});
-Route::prefix('user')->group(function () {
-    Route::get('/registrasi', [AuthController::class, 'registrasi']);
+Route::get('/', [UserController::class, 'index']);
+Route::post('/daftar', [AuthController::class, 'daftarStore']);
+Route::post('/auth', [AuthController::class, 'login']);
+Route::post('/auth/verifikasi-token', [AuthController::class, 'verifikasiToken']);
+Route::get('/verifikasi-akun', [AuthController::class, 'verifikasiTokenPage']);
+
+Route::prefix('admin')->group(function () {
+    Route::get('/index', [AdminController::class, 'index']);
 });

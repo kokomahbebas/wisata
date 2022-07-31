@@ -10,7 +10,7 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/">Home</a></li>
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/tentang">Tentang</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/produk">Kontak</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/admin/index">Kontak</a></li>
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" data-bs-toggle="modal"
                             data-bs-target="#login" href="#">Login</a></li>
                 </ul>

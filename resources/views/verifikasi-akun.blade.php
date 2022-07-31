@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Fatubraon - Login</title>
+    <title>Fatubraon - Verifikasi Token</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -31,34 +31,46 @@
     <link href="/user/css/style.css" rel="stylesheet">
 </head>
 
-<body style="background-color: #fd8625">
-     <!-- Quote Start -->
-     <div class="container-fluid bg-primary bg-quote py-5">
+<body style="background-color: #FFE468">
+
+    @if (session()->has('error'))
+        <script>
+            Swal.fire("Gagal", "{{ session('error') }}", "error");
+        </script>
+    @endif
+
+    <!-- Quote Start -->
+    <div class="container-fluid bg-primary bg-quote py-5">
         <div class="container py-5">
             <div class="row g-0 justify-content-start">
                 <div class="col-lg-5 mx-auto">
                     <div class="bg-white text-center p-5" style="border-radius: 20px">
-                        <img src="/about.jpg" width="100px" alt="">
-                        <h1 class="mb-4 mt-4">Login</h1>
-                        <form action="/auth" method="post">
+                        <img src="/logo.png" width="100px" alt="">
+                        <h1 class="mb-4 mt-4">Wisata Fatubraon</h1>
+                        <form action="/auth/verifikasi-token" method="post">
+                            @csrf
                             <div class="row g-3">
+                                @if (session()->has('error'))
+                                    <div class="alert alert-danger">{{ session('error') }}</div>
+                                @endif
+                                @if (session()->has('success'))
+                                    <div class="alert alert-success">{{ session('success') }}</div>
+                                @endif
                                 <div class="col-12 col-sm-12">
-                                    <input type="email" class="form-control bg-light border-0" name="email"
-                                        placeholder="Email anda" style="height: 55px;">
+                                    <input type="text" class="form-control bg-light border-0" name="token"
+                                        placeholder="6 Digit Token Anda" style="height: 55px;">
                                 </div>
-                                <div class="col-12 col-sm-12">
-                                    <input type="password" class="form-control bg-light border-0" name="password"
-                                        placeholder="Password" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Login</button>
-                                </div>
-                                <div class="col-6">
-                                    <label for=""><a href="/lupa-password" style="color:rgb(43, 95, 185)">Lupa
-                                            password?</a></label>
-                                </div>
-                                <div class="col-6">
-                                    <a href="/user/registrasi" class="btn btn-dark w-100">Daftar</a>
+                                <span class="text-muted">Jika email tidak masuk, cek folder spam anda.</span><br>
+                                <div class="row mt-4">
+                                    <div class="col-6">
+                                        <a href="/kirim-token" class="btn btn-dark w-100 py-3">
+                                            <i class="bi bi-arrow-counterclockwise"></i>
+                                            Kirim ulang
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Verifikasi</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -69,15 +81,15 @@
     </div>
     <!-- Quote End -->
 
-
-    <!-- Footer Start -->
+    <br><br <!-- Footer Start -->
     <div class="container-fluid bg-dark bg-footer text-light py-5">
         <div class="container py-0">
             <div class="row g-5">
                 <div class="container">
                     <div class="row g-0">
                         <div class="col-md-6 text-center text-md-start">
-                            <p class="mb-md-0">Copyright &copy; <a class="fw-bold" href="#">Fatubraon</p>
+                            <p class="mb-md-0">Copyright &copy; <a class="fw-bold" href="#">Fatubraon
+                                    </p>
                         </div>
                     </div>
                 </div>
@@ -98,4 +110,5 @@
     <!-- Template Javascript -->
     <script src="/user/js/main.js"></script>
 </body>
+
 </html>

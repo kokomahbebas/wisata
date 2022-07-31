@@ -122,7 +122,7 @@
     </div>
     <!--Tutup modal login-->
 
-   
+
 
 </body>
 <script>
@@ -134,6 +134,13 @@
         $('#kembaliLogin').on('click', function() {
             $('#loginForm').css("display", "block");
             $('#daftarForm').css("display", "none");
+        });
+        $('#kontakKirim').submit(function() {
+            let nama = $('#namaKontak').val();
+            let subjek = $('#subjekKontak').val();
+            let isi = $('#isiKontak').val();
+            $(location).attr("href", "mailto:fatubraonofficial@gmail.com?subject=" + subjek +
+                "&body=Halo nama saya " + nama + ", Pesan saya: " + isi);
         });
     });
 </script>

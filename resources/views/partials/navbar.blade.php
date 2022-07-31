@@ -10,7 +10,11 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/">Home</a></li>
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/tentang">Tentang</a></li>
-                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/admin/index">Kontak</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/kontak">Kontak</a></li>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/fatubraon-store">Store</a>
+                    <li class="nav-item px-lg-4"><a class="nav-link text-uppercase"
+                            href="/fatubraon-store">Keranjang</a>
+                    </li>
                     <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" data-bs-toggle="modal"
                             data-bs-target="#login" href="#">Login</a></li>
                 </ul>

@@ -2,51 +2,63 @@
 @section('isi')
     <!-- Main content -->
     <main id="main" class="site-main">
-        <section class="page-section clearfix">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="/assets/img/intro.jpg" alt="..." />
-                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">Tentang</span>
-                            <span class="section-heading-lower">Kabupaten Kupang</span>
-                        </h2>
-                        <p class="mb-3">
-                            Kabupaten Kupang adalah salah satu kabupaten di provinsi Nusa Tenggara Timur, Indonesia. Ibu
-                            kota kabupaten ini berlokasi di Kota Oelamasi mulai 22 Oktober 2010.
-                        </p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="/tentang">Lihat lebih
-                                lanjut!</a></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="page-section clearfix">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="/assets/img/rappeling.jpg"
-                        style="-webkit-transform: scaleX(-1);transform: scaleX(-1);" alt="..." />
-                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">Wisata Fatubraon</span>
-                            <span class="section-heading-lower">Rappeling</span>
-                        </h2>
-                        <div class="mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-                                <path
-                                    d="M21.103 14.598c-.509-1.504-2.306-2.497-3.806-1.91l-6.235-10.688-11.062 20h20.25c2.067 0 3.75-1.682 3.75-3.75 0-1.774-1.239-3.265-2.897-3.652zm-.853 5.402h-3.26c-1.515-.008-2.505-1.653-1.708-3.009l-3.595-6.334-1.078 1.906-1-1.906-3.026 3.635 4.521-8.344 5.521 9.552c.875-1.781 3.328-.688 2.688 1.104 1.271-.5 2.687.224 2.687 1.646 0 .965-.785 1.75-1.75 1.75zm-2.236-8.579l-2.656-4.625.867-.498 2.656 4.625-.867.498zm3.298 1.579l-2.656-4.625.867-.498 2.656 4.625-.867.498z" />
-                            </svg>
+        <div class="row">
+            <div class="col-lg-12">
+                <section class="page-section clearfix">
+                    <div class="container">
+                        <div class="intro">
+                            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="/assets/img/intro.jpg" alt="..." />
+                            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-upper">Tentang</span>
+                                    <span style="font-weight: 100">Kabupaten Kupang</span>
+                                </h2>
+                                <p class="mb-3">
+                                    Kabupaten Kupang adalah salah satu kabupaten di provinsi Nusa Tenggara Timur, Indonesia.
+                                    Ibu
+                                    kota kabupaten ini berlokasi di Kota Oelamasi mulai 22 Oktober 2010.
+                                </p>
+                                <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="/tentang">Lihat
+                                        lebih
+                                        lanjut!</a></div>
+                            </div>
                         </div>
-                        <p class="mb-3">
-                            Di Fatubrao terdapat spot rappeling bagi kamu pecinta alam! tebing-tebing di Fatubrao memiliki
-                            pemandangan yang indah dan pastinya sangat instagrammable banget!
-                        </p>
-                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="/tentang">Lihat lebih
-                                lanjut!</a></div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
+            <div class="col-lg-12">
+                <section class="page-section clearfix">
+                    <div class="container">
+                        <div class="intro">
+                            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="/assets/img/rappeling.jpg"
+                                style="-webkit-transform: scaleX(-1);transform: scaleX(-1);" alt="..." />
+                            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-upper">Wisata Fatubraon</span>
+                                    <span style="font-weight: 100">Rappeling</span>
+                                </h2>
+                                <div class="mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M21.103 14.598c-.509-1.504-2.306-2.497-3.806-1.91l-6.235-10.688-11.062 20h20.25c2.067 0 3.75-1.682 3.75-3.75 0-1.774-1.239-3.265-2.897-3.652zm-.853 5.402h-3.26c-1.515-.008-2.505-1.653-1.708-3.009l-3.595-6.334-1.078 1.906-1-1.906-3.026 3.635 4.521-8.344 5.521 9.552c.875-1.781 3.328-.688 2.688 1.104 1.271-.5 2.687.224 2.687 1.646 0 .965-.785 1.75-1.75 1.75zm-2.236-8.579l-2.656-4.625.867-.498 2.656 4.625-.867.498zm3.298 1.579l-2.656-4.625.867-.498 2.656 4.625-.867.498z" />
+                                    </svg>
+                                </div>
+                                <p class="mb-3">
+                                    Di Fatubrao terdapat spot rappeling bagi kamu pecinta alam! tebing-tebing di Fatubrao
+                                    memiliki
+                                    pemandangan yang indah dan pastinya sangat instagrammable banget!
+                                </p>
+                                <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="/tentang">Lihat
+                                        lebih
+                                        lanjut!</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
         <section class="page-section cta">
             <div class="container">
                 <div class="row">
@@ -67,7 +79,7 @@
                                 lanjut</p>
 
                             <div class="mx-auto mt-5 mb-2">
-                                <a href="#" class="btn btn-dark text-white p-3">
+                                <a href="/fatubraon-store" class="btn btn-dark text-white p-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                         viewBox="0 0 24 24">
                                         <path style="fill: white"

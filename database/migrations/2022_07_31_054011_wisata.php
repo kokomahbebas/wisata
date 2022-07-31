@@ -17,7 +17,6 @@ return new class extends Migration
             $t->string('wisata_id');
             $t->string('nama_wisata');
             $t->string('deskripsi_wisata');
-            $t->string('tautan');
             $t->string('gambar');
             $t->timestamps();
         });

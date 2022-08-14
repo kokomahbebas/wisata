@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
@@ -20,6 +21,9 @@ Route::post('/daftar', [AuthController::class, 'daftarStore']);
 Route::post('/auth', [AuthController::class, 'login']);
 Route::post('/auth/verifikasi-token', [AuthController::class, 'verifikasiToken']);
 Route::get('/verifikasi-akun', [AuthController::class, 'verifikasiTokenPage']);
+Route::get('/fatubraon-store', [UserController::class, 'fatubraonStore']);
+Route::get('/tentang', [UserController::class, 'tentangPage']);
+Route::get('/kontak', [UserController::class, 'kontakPage']);
 
 Route::prefix('admin')->group(function () {
     Route::get('/index', [AdminController::class, 'index']);

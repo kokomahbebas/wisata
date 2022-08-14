@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 
 return new class extends Migration
 {
@@ -14,7 +15,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('wisata', function (Blueprint $t) {
-            $t->string('wisata_id');
+            $t->string('wisata_id')->default(Str::random(12));
             $t->string('nama_wisata');
             $t->string('deskripsi_wisata');
             $t->string('gambar');

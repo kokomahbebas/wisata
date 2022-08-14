@@ -27,4 +27,8 @@ Route::get('/kontak', [UserController::class, 'kontakPage']);
 
 Route::prefix('admin')->group(function () {
     Route::get('/index', [AdminController::class, 'index']);
+    Route::get('/wisata', [AdminController::class, 'wisata']);
+    Route::post('/wisata/store', [AdminController::class, 'wisataStore']);
+    Route::get('/layanan', [AdminController::class, 'layanan']);
+    Route::post('/layanan/store', [AdminController::class, 'layananStore']);
 });
